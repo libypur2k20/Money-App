@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money App", "Money App.csproj", "{39448AAA-6EF6-4D5D-A15C-CC654C41BB7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39448AAA-6EF6-4D5D-A15C-CC654C41BB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39448AAA-6EF6-4D5D-A15C-CC654C41BB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39448AAA-6EF6-4D5D-A15C-CC654C41BB7D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{39448AAA-6EF6-4D5D-A15C-CC654C41BB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39448AAA-6EF6-4D5D-A15C-CC654C41BB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39448AAA-6EF6-4D5D-A15C-CC654C41BB7D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37E7FC48-D472-4D73-A8C4-56F4515B9878}
+	EndGlobalSection
+EndGlobal
