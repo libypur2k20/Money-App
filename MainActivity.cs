@@ -3,6 +3,8 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
+using Calligraphy;
+using Android.Content;
 
 namespace Money_App
 {
@@ -12,8 +14,21 @@ namespace Money_App
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
+
+            CalligraphyConfig.InitDefault(new CalligraphyConfig.Builder()
+                .SetDefaultFontPath("fonts/GlacialIndifference-Regular.ttf")
+                .SetFontAttrId(Resource.Attribute.fontPath)
+                .Build());
+
             SetContentView(Resource.Layout.activity_main);
+        }
+
+
+        protected override void AttachBaseContext(Context @base)
+        {
+            base.AttachBaseContext(CalligraphyContextWrapper.Wrap(@base));
         }
     }
 }
+
+

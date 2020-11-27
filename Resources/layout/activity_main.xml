@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
     
     <!-- Section One -->
     <RelativeLayout
@@ -13,13 +14,15 @@
         android:layout_weight="0.2">
 
         <RelativeLayout
+            android:background="@drawable/roundededges"
+            android:elevation="4dp"
             android:padding="10dp"
             android:layout_centerInParent="true"
-            android:background="#ececec"
             android:layout_width="match_parent"
             android:layout_height="90dp">
 
-            <ImageView
+            <Refractored.Controls.CircleImageView
+                android:layout_marginRight="15dp"
                 android:src="@drawable/personal1"
                 android:id="@+id/profileImage"
                 android:layout_centerVertical="true"
@@ -30,6 +33,7 @@
                 android:id="@+id/nameTextView"
                 android:text="Uchenna Nnodim"
                 android:textSize="16sp"
+                fontPath="fonts/GlacialIndifference-Bold.ttf"
                 android:textStyle="bold"
                 android:layout_toRightOf="@+id/profileImage"
                 android:layout_width="wrap_content"
@@ -61,23 +65,27 @@
                 android:layout_height="wrap_content">
             
                 <ImageView
+                    android:tint="@color/colorOrange"
                     app:srcCompat="@drawable/star"
                     android:layout_width="15dp"
                     android:layout_height="15dp"/>
 
                 <ImageView
+                    android:tint="@color/colorOrange"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/star"
                     android:layout_width="15dp"
                     android:layout_height="15dp"/>
 
                 <ImageView
+                    android:tint="@color/colorOrange"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/star"
                     android:layout_width="15dp"
                     android:layout_height="15dp"/>
 
                 <ImageView
+                    android:tint="@color/colorOrange"
                     android:layout_marginLeft="5dp"
                     app:srcCompat="@drawable/star"
                     android:layout_width="15dp"
@@ -94,4 +102,359 @@
             </RelativeLayout>
     </RelativeLayout>
 
+    <!-- Section Two -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.22">
+
+
+        <TextView
+            android:layout_above="@+id/balanceTextView"
+
+            android:text="Account Balance"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/balanceTextView"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:text="$32,405.00"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            fontPath="fonts/GlacialIndifference-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+    <!-- Section Three -->
+    
+    <ScrollView
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45">
+
+
+            <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@drawable/roundededges"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Refractored.Controls.CircleImageView
+                android:id="@+id/friendImageView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/personal1"
+                android:layout_width="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:text="Transfer to Julia"
+                android:textStyle="bold"
+                fontPath="fonts/GlacialIndifference-Bold.ttf"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/transferDateTextView"
+                android:text="22-May-2001"
+                android:layout_below="@+id/descriptionTextView"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/colorRed"
+                android:layout_alignParentRight="true"
+                android:id="@+id/transferAmountTextView"
+                android:text="-$7,000.00"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/viewButton"
+                android:layout_below="@+id/transferAmountTextView"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:text="View"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    
+        <RelativeLayout
+            android:background="@drawable/roundededges"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Refractored.Controls.CircleImageView
+                android:id="@+id/friendImageView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/personal"
+                android:layout_width="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:text="Deposit from Kaycee"
+                fontPath="fonts/GlacialIndifference-Bold.ttf"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/transferDateTextView"
+                android:text="24-June-2019"
+                android:layout_below="@+id/descriptionTextView"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/colorGreen"
+                android:layout_alignParentRight="true"
+                android:id="@+id/transferAmountTextView"
+                android:text="$2,200.00"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/viewButton"
+                android:layout_below="@+id/transferAmountTextView"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:text="View"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/roundededges"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Refractored.Controls.CircleImageView
+                android:id="@+id/friendImageView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/me"
+                android:layout_width="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:text="Deposit from Peter"
+                fontPath="fonts/GlacialIndifference-Bold.ttf"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/transferDateTextView"
+                android:text="27-Jue-2019"
+                android:layout_below="@+id/descriptionTextView"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/colorGreen"
+                android:layout_alignParentRight="true"
+                android:id="@+id/transferAmountTextView"
+                android:text="$4,715.00"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/viewButton"
+                android:layout_below="@+id/transferAmountTextView"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:text="View"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/roundededges"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Refractored.Controls.CircleImageView
+                android:id="@+id/friendImageView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/me"
+                android:layout_width="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:text="Deposit from Peter"
+                fontPath="fonts/GlacialIndifference-Bold.ttf"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/transferDateTextView"
+                android:text="27-Jue-2019"
+                android:layout_below="@+id/descriptionTextView"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/colorGreen"
+                android:layout_alignParentRight="true"
+                android:id="@+id/transferAmountTextView"
+                android:text="$4,715.00"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/viewButton"
+                android:layout_below="@+id/transferAmountTextView"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:text="View"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/roundededges"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Refractored.Controls.CircleImageView
+                android:id="@+id/friendImageView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/me"
+                android:layout_width="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:text="Deposit from Peter"
+                fontPath="fonts/GlacialIndifference-Bold.ttf"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/transferDateTextView"
+                android:text="27-Jue-2019"
+                android:layout_below="@+id/descriptionTextView"
+                android:layout_toRightOf="@+id/friendImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/colorGreen"
+                android:layout_alignParentRight="true"
+                android:id="@+id/transferAmountTextView"
+                android:text="$4,715.00"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/viewButton"
+                android:layout_below="@+id/transferAmountTextView"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:text="View"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+    
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Section Four-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <LinearLayout
+            android:showDividers="middle"
+            android:divider="@drawable/width10divider"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@drawable/roundedbutton"
+                android:drawableLeft="@drawable/history"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textAllCaps="false"
+                android:text="View History"
+                android:layout_width="0dp"
+                android:layout_weight="0.45"
+                android:layout_height="45dp"/>
+
+            <Button
+                android:background="@drawable/roundedbutton"
+                android:drawableLeft="@drawable/addnew"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAllCaps="false"
+                android:text="New Transaction"
+                android:layout_width="0dp"
+                android:layout_weight="0.45"
+                android:layout_height="45dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    
+    
 </LinearLayout>
